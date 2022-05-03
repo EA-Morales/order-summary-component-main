@@ -4,7 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'Pale-blue': 'hsl(225, 100%, 94%)',
+            'Bright-blue': 'hsl(245, 75%, 52%)',
+            'Very-pale-blue': 'hsl(225, 100%, 98%)',
+            'Desaturated-blue': 'hsl(224, 23%, 55%)',
+            'Dark-blue': 'hsl(223, 47%, 23%)',
+          }
+        },
+        fontFamily: {
+          red: ['Red Hat Display', 'sans-serif'],
+    },
+      }
+    }
+  </script>
   
   <title>Frontend Mentor | Order summary card</title>
 
@@ -14,24 +39,64 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
+<body class="min-h-fit my-10 bg-Pale-blue bg-[url('/images/pattern-background-mobile.svg')] md:bg-[url('/images/pattern-background-desktop.svg')] bg-contain bg-no-repeat md:bg-top flex flex-col justify-center items-center">
 
-  Order Summary
+  <div class="bg-white w-[330px] h-[570px] md:h-[700px] md:w-[450px] rounded-3xl overflow-hidden shadow-lg">
+    
+    <figure class="bg-[url('/images/illustration-hero.svg')] h-[160px] md:h-[220px] bg-contain"></figure>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <div class="py-8 md:py-12 px-[25px] md:px-12">
 
-  Annual Plan
-  $59.99/year
+      <h1 class="font-red font-black text-center text-2xl text-Dark-blue mb-4 md:mb-8">
+        Order Summary
+      </h1>
+    
+      <p class="font-red font-medium text-Desaturated-blue text-center text-base px-3">
+        You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </p>
 
-  Change
+      <div class="h-[80px] px-5 flex items-center bg-Very-pale-blue mt-5 md:mt-6 gap-4 rounded-xl">
 
-  Proceed to Payment
-  Cancel Order
+        <figure class="bg-Pale-blue h-[50px] w-[50px] rounded-full flex justify-center items-center">
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-Desaturated-blue" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+          </svg>
+
+        </figure>
+
+        <div class="flex flex-col">
+          <p class="font-red font-black text-sm text-Dark-blue">
+            Annual Plan
+          </p>
+          <p class="font-red text-sm text-Desaturated-blue">
+            $59.99/year
+          </p>
+        </div>
+
+        <a href="" class="ml-auto text-red text-sm font-bold text-Bright-blue underline hover:text-indigo-500">
+          Change
+        </a>
+      
+      </div>    
+    
+      <div class="flex flex-col mt-6 md:mt-9 gap-6">
+        <button class="bg-Bright-blue h-12 text-white text-red font-bold rounded-2xl hover:bg-indigo-500 shadow-xl">
+          Proceed to Payment
+        </button>
+        <div class="text-center">
+          <a role="button" class="text-red text-center font-bold text-Desaturated-blue hover:text-Dark-blue">
+            Cancel Order
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <div class="attribution">
+  <div class="attribution mt-3">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Agustin Morales ❤️</a>.
   </div>
 </body>
 </html>
