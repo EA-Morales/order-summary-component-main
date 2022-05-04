@@ -700,17 +700,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body {
-  background-image: url('images/pattern-background-mobile.svg');
+  background-image: url('./images/pattern-background-mobile.svg');
 }
 
 @media only screen and (min-width: 768px) {
   body {
-    background-image: url('images/pattern-background-desktop.svg');
+    background-image: url('./images/pattern-background-desktop.svg');
   }
 }
 
 .image {
-  background-image: url('images/illustration-hero.svg');
+  background-image: url('./images/illustration-hero.svg');
 }
 
 .hover\:bg-indigo-500:hover {
