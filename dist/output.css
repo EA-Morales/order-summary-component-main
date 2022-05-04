@@ -710,7 +710,7 @@ body {
 }
 
 .image {
-  background-image: url('/images/illustration-hero.svg');
+  background-image: url('../images/illustration-hero.svg');
 }
 
 .hover\:bg-indigo-500:hover {
