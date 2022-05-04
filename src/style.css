@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-image: url('/images/pattern-background-mobile.svg');
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+      background-image: url('/images/pattern-background-desktop.svg');
+    }
+  }
+
+.image {
+    background-image: url('/images/illustration-hero.svg');
+}
